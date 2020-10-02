@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liquid Crystal JS Demo</title>
+    <meta name="author" content="FeLIX">
+    <meta charset="utf-8">
+    <style>
+        body {
+            background-color: black;
+            color: #ccc;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Liquid Crystal JS Demo</h1>
+
+    <canvas id="myCanvas" width="420" height="100"></canvas>
+
+    <script src="fxlcd.js"></script>
+
+    <script>
+        // create LCD instance
+        let lcd = new fxLiquidCrystalJS("myCanvas")
+        lcd.init()
+        lcd.setContrast(60)
+
+        // define custom character
+        var arrow = [
+            0b10000,
+            0b11000,
+            0b11100,
+            0b11110,
+            0b11100,
+            0b11000,
+            0b10000
+            ]
+        lcd.createChar(0, arrow)
+
+        // write some text
+        lcd.setCursor(0,0)
+        lcd.print("ABCDEFGHIJKLMNO")
+        lcd.setCursor(0,1)
+        lcd.print("PQRSTUVWXYZFELIX")
+
+        lcd.setCursor(15,0)
+        lcd.printByte(0x00)
+    </script>
+
+</body>
+</html>

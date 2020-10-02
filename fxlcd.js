@@ -181,6 +181,36 @@ class fxLiquidCrystalJS {
         this.setCursor(0, 0)
     }
 
+    noDisplay() {}
+    display() {}
+
+    noBlink() {}
+    blink() {}
+
+    noCursor() {}
+    cursor() {}
+
+    scrollDisplayLeft() {}
+    scrollDisplayRight() {}
+
+    printLeft() {}
+    printRight() {}
+
+    leftToRight() {}
+    rightToLeft() {}
+
+    shiftIncrement() {}
+    shiftDecrement() {}
+
+    noBacklight() {
+        // this.back = pSBC(-0.8, this.back_)
+    }
+    backlight() {
+        this.back = this.back_
+    }
+
+    autoscroll() {}
+    noAutoscroll() {}
 
     setContrast(val) {
         this.contrast = constrain(val, 0, 100)

@@ -1,6 +1,6 @@
 # fxLiquidCrystalJS
 
-**Software simulation of lqiuid crystal display for use in webpages**
+**Software simulation of liquid crystal display for use in webpages**
 
 ![License: MIT](https://img.shields.io/github/license/flxm/fxLiquidCrystal)
 
